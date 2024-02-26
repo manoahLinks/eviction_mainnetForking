@@ -21,9 +21,6 @@ const main = async () => {
   const amountADesired = ethers.parseUnits("20000", 6);
   const amountBDesired = ethers.parseUnits("200000000000000000000", 18);
 
-  console.log(
-    "-----------------------------------------------------------------"
-  );
 
   const USDC = await ethers.getContractAt("IERC20", USDCAddress);
   const DAI = await ethers.getContractAt("IERC20", DAIAddress);
@@ -32,7 +29,7 @@ const main = async () => {
   const ROUTER = await ethers.getContractAt("IUniswap", UNIRouter);
 
   console.log(
-    "-----------------------------------------------------------------"
+    "----------------------------geting Router-------------------------------------"
   );
 
   const approvesA = await USDC.connect(impersonatedSigner).approve(
@@ -50,7 +47,7 @@ const main = async () => {
   await approveB.wait();
 
   console.log(
-    "-----------------------------------------------------------------"
+    "---------------------Apprv B--------------------------------------------"
   );
 
 
@@ -65,14 +62,14 @@ const main = async () => {
   const daiBal = await DAI.balanceOf(impersonatedSigner.address);
 
   console.log(
-    "-----------------------------------------------------------------"
+    "-----------------------Bal b4 adding lquidity------------------------------------------"
   );
 
   console.log("USDC Balance:", ethers.formatUnits(usdcBal, 6));
   console.log("DAI Balance:", ethers.formatUnits(daiBal, 18));
 
   console.log(
-    "-----------------------------------------------------------------"
+    "-------------------------adding liquidity------------------------------------"
   );
 
   const deadline = Math.floor(Date.now() / 1000) + 60 * 10;
@@ -94,7 +91,7 @@ const main = async () => {
   const daiBalAfterSwap = await DAI.balanceOf(impersonatedSigner.address);
 
   console.log(
-    "-----------------------------------------------------------------"
+    "-----------------Liquidity added---------------------------------------"
   );
 
 

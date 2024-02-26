@@ -9,8 +9,11 @@ node_modules
 /typechain
 /typechain-types
 
+scripts/swapTokensForExactETH.ts
+
 # solidity-coverage files
 /coverage
 /coverage.json
 
 scripts/swapTokensForExactTokens.ts
+
