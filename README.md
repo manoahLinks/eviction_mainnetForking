@@ -1,13 +1,7 @@
-# Sample Hardhat Project
+UNISWAP V2 interaction
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+functions interacted with:
 
-Try running some of the following tasks:
+1. addLiquidity
 
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.ts
-```
+2. swapExactTokensForTokens
